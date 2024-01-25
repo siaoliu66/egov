@@ -684,7 +684,7 @@
               //url: 'https://www.gov.tw/chatbotapi.aspx?type=check&s=' + searchword,
               cache: true,
               success: function (obj) {
-                console.log(datas)
+              //  console.log(datas)
                 apiobj = obj;
                 servivecobj = obj.Source
                 var str = '<div class="atalk"><span class="dialog">' + vm.newline(apiobj.R)  +'<a class="talk_sub source" style="width:95%;margin:5px" onclick="vm.toggle(event)">資料來源</a><div style="display:none">'
@@ -700,7 +700,7 @@
                       element.Title +
                       "</a></p>";
                 })
-                str += "</div><ul class='assess'><li><a>滿意</a></li><li><a>不滿意</a></li></ul><span class='text'>以上資訊由AI生成</span>" +  vm.getDateString() + "</span></div>";
+                str += "</div><ul class='assess'><li><a>滿意</a></li><li><a>不滿意</a></li></ul><span style='position: absolute;font-size: 0.8rem;bottom: -20px;'>以上資訊由AI生成</span>" +  vm.getDateString() + "</span></div>";
                 vm.append(str);
               },
             });
@@ -1217,13 +1217,7 @@
       border: none !important;
       background-size: 30% !important;
      }
-    .atalk .text{
-      position: absolute;
-      left: 0px;
-      font-size: 0.8rem;
-      bottom: -20px;
-    }
-    
+   
     </style>
   </body>
 </html>
