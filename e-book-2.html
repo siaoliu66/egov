@@ -700,7 +700,7 @@
                       element.Title +
                       "</a></p>";
                 })
-                str += "</div><ul class='assess'><li><a>滿意</a></li><li><a>不滿意</a></li></ul><span style='position: absolute;font-size: 0.8rem;bottom: -20px;'>以上資訊由AI生成</span>" +  vm.getDateString() + "</span></div>";
+                str += "</div><ul class='assess'><li><a onclick=\"vm.satisfylog($(this),'','','','1','"+searchword+"')\">滿意</a></li><li><a onclick=\"vm.satisfylog($(this),'','','','0','"+searchword+"')\">不滿意</a></li></ul><span style='position: absolute;font-size: 0.8rem;bottom: -20px;'>以上資訊由AI生成</span>" +  vm.getDateString() + "</span></div>";
                 vm.append(str);
               },
             });
@@ -864,11 +864,11 @@
                                 "</span></div>";
                               $("#words").append(str);
                               var satisfy =
-                                '<div class="atalk"><span class="dialog ">對這次服務滿意嗎?<ul class="evaluate"><li><a onclick=\'satisfylog($(this),"",' +
+                                '<div class="atalk"><span class="dialog ">對這次服務滿意嗎?<ul class="evaluate"><li><a onclick=\'vm.satisfylog($(this),"",' +
                                 lep +
                                 "," +
                                 parentSN +
-                                ',"1","")\'>滿意</a></li><li><a onclick=\'satisfylog($(this),"",' +
+                                ',"1","")\'>滿意</a></li><li><a onclick=\'vm.satisfylog($(this),"",' +
                                 lep +
                                 "," +
                                 parentSN +
@@ -1095,6 +1095,11 @@
               $(".informationBlock>div").hide();
             }
           },
+          isebookicon: function () {
+            if (this.isebookicon == false) {
+              this.istalkcon == false
+            }
+          },
           deep: true,
         },
       });
@@ -1199,26 +1204,36 @@
     .evaluate li:nth-child(2) a {
       background: url(https://www.gov.tw/Images/unlike.png) no-repeat center #ffbfb4;
      } 
+    
      /*時間-滿意度樣式*/
      .assess{
       position: absolute;
-      bottom: -15px;
+      bottom: -33px;
       right: 35px;
       display: flex;
      }
+     .assess li{
+      padding: 2px !important;
+     }
      .assess li a{
       font-size: 0;
-      height: 20px;
-      width: 20px;
+      height: 25px;
+      width: 25px;
       box-sizing: border-box;
-      margin: 0 auto;
-      border-radius: 50px !important;
+      padding: 0 !important;
+      border-radius: 50% !important;
       cursor: pointer;
       border: none !important;
-      background-size: 30% !important;
+      background-size: 50% !important;
      }
-      /*下方搜尋框寬度*/
-   .talk_word{
+     .assess li:nth-child(1) a {
+      background: url(https://www.gov.tw/Images/like.png) no-repeat center #98e0b2;
+    }
+    .assess li:nth-child(2) a {
+      background: url(https://www.gov.tw/Images/unlike.png) no-repeat center #ffbfb4;
+    }
+
+     .talk_word{
       width: calc(100% - 82px);
      }
     </style>
