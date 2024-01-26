@@ -10,8 +10,11 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://www.gov.tw/Scripts/jquery-ui.min.js?1"></script>
     <!-- <script src="https://www.gov.tw/js/marqueeHorizontal.js?version=v2"></script> -->
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <style type="text/css">
@@ -113,9 +116,10 @@
       }
     </style>
   </head>
+
   <body>
-    <div id="app">
-      <div class="base-extend">
+    <div class="sys-root">
+      <div class="group base-extend">
         <div class="in">
           <div class="list-text share e-book" style="position: inherit">
             <div class="in">
@@ -139,92 +143,139 @@
         </div>
       </div>
 
-      <!-- 小幫手對話框展開 -->
-      <div class="talk_con" v-show="istalkcon">
-        <div class="talk_header">
-          <span class="chat_title">我的E政府 智能幫手</span>
-          <a class="close" @click.prevent="istalkcon =!istalkcon,isebookicon =! isebookicon">X</a>
-          <div class="information">
-            <!-- 原html沒有 -->
-            <a
-              class="btn"
-              title="&zwnj;"
-              @click="isinformation = !isinformation"
-              ><p style="display: none">&zwnj;</p></a
-            >
-            <!-- finish -->
-            <div
-              class="box"
-              v-if="isinformation" style="display: block;"
-            >
-              <ul>
-                <li class="btn_statify">
-                  <span
-                    ><a title="滿意度調查" @click="btn_statify" target="_blank"
-                      >滿意度調查</a
-                    ></span
+      <div
+        class="area-editor default e-book"
+        data-addparentgroup="False"
+        data-anchor=""
+        data-bgclass="e-book"
+        data-bgcolor="#0000ffff"
+        data-child="1"
+        data-groupname=""
+        data-groupsn="2273"
+        data-index="4"
+        data-isgroup="true"
+        data-margin_bottom="0"
+        data-margin_defaultsetting="false"
+        data-margin_left="0"
+        data-margin_right="0"
+        data-margin_top="0"
+        data-menuwidth=""
+        data-setlen="0"
+        data-sitesmodulesn="6"
+        data-sort="8"
+        data-tabtype="0"
+        data-type="0"
+        data-widthdesktop="0"
+        data-widthmobile="0"
+        data-widthpad="0"
+        id="Group_2273_YYpUwxTtPL"
+      >
+        <div class="in">
+          <div class="ct">
+            <div class="in">
+              <!-- 小幫手對話框展開 -->
+              <div class="talk_con" v-show="istalkcon">
+                <div class="talk_header">
+                  <span class="chat_title">我的E政府 智能幫手</span>
+                  <a
+                    class="close"
+                    @click.prevent="istalkcon =!istalkcon,isebookicon =! isebookicon"
+                    >X</a
                   >
-                </li>
-                <li class="btn_privacy">
-                  <span
-                    ><a
-                      href="cp.aspx?n=16"
-                      target="_blank"
-                      title="隱私權保護政策"
-                      >隱私權保護政策</a
-                    ></span
-                  >
-                </li>
-                <li class="btn_description">
-                  <span
-                    ><a @click="btn_des_open" title="服務說明" target="_blank"
-                      >服務說明</a
-                    ></span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
+                  <div class="information">
+                    <!-- 原html沒有 -->
+                    <a
+                      class="btn"
+                      title="&zwnj;"
+                      @click="isinformation = !isinformation"
+                      ><p style="display: none">&zwnj;</p></a
+                    >
+                    <!-- finish -->
+                    <div
+                      class="box"
+                      v-if="isinformation"
+                      style="display: block"
+                    >
+                      <ul>
+                        <li class="btn_statify">
+                          <span
+                            ><a
+                              title="滿意度調查"
+                              @click="btn_statify"
+                              target="_blank"
+                              >滿意度調查</a
+                            ></span
+                          >
+                        </li>
+                        <li class="btn_privacy">
+                          <span
+                            ><a
+                              href="cp.aspx?n=16"
+                              target="_blank"
+                              title="隱私權保護政策"
+                              >隱私權保護政策</a
+                            ></span
+                          >
+                        </li>
+                        <li class="btn_description">
+                          <span
+                            ><a
+                              @click="btn_des_open"
+                              title="服務說明"
+                              target="_blank"
+                              >服務說明</a
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
-          <!-- 設定按紐開啟 -->
-          <div class="set_up">
-            <!-- 原html沒有 -->
-            <a
-              class="btn"
-              title="&zwnj;"
-              @click="isset_up = !isset_up"
-              ><p style="display: none">&zwnj;</p></a
-            >
-            <div class="box" v-if="isset_up" style="display: block;">
-              <div class="sort">
-                <div class="title">字型</div>
-                <ul class="font">
-                  <li
-                    class="small"
-                    data-index="1"
-                    :class="{'is-active': fontSize == '0.5rem'}"
-                  >
-                    <span
-                      ><a title="小字級" @click="fontSize='0.5rem'">小</a></span
+                  <!-- 設定按紐開啟 -->
+                  <div class="set_up">
+                    <!-- 原html沒有 -->
+                    <a class="btn" title="&zwnj;" @click="isset_up = !isset_up"
+                      ><p style="display: none">&zwnj;</p></a
                     >
-                  </li>
-                  <li class="medium" :class="{'is-active': fontSize == '1rem'}">
-                    <span
-                      ><a title="中字級" @click="fontSize='1rem'">中</a></span
-                    >
-                  </li>
-                  <li
-                    class="large"
-                    :class="{'is-active': fontSize == '1.5rem'}"
-                  >
-                    <span
-                      ><a title="大字級" @click="fontSize='1.5rem'">大</a></span
-                    >
-                  </li>
-                </ul>
-              </div>
-              <!-- 不使用 -->
-              <!-- <div class="sort">
+                    <div class="box" v-if="isset_up" style="display: block">
+                      <div class="sort">
+                        <div class="title">字型</div>
+                        <ul class="font">
+                          <li
+                            class="small"
+                            data-index="1"
+                            :class="{'is-active': fontSize == '0.5rem'}"
+                          >
+                            <span
+                              ><a title="小字級" @click="fontSize='0.5rem'"
+                                >小</a
+                              ></span
+                            >
+                          </li>
+                          <li
+                            class="medium"
+                            :class="{'is-active': fontSize == '1rem'}"
+                          >
+                            <span
+                              ><a title="中字級" @click="fontSize='1rem'"
+                                >中</a
+                              ></span
+                            >
+                          </li>
+                          <li
+                            class="large"
+                            :class="{'is-active': fontSize == '1.5rem'}"
+                          >
+                            <span
+                              ><a title="大字級" @click="fontSize='1.5rem'"
+                                >大</a
+                              ></span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 不使用 -->
+                      <!-- <div class="sort">
                 <div class="title">角色</div>
                 <ul class="user">
                   <li v-for="(item,key) in roleALL" :key="key">
@@ -254,113 +305,117 @@
                   >重設</a
                 >
               </div> -->
-              <!-- finish -->
-            </div>
-          </div>
-        </div>
-        <!-- 上方按鈕開啟內容 -->
-        <div class="informationBlock">
-          <div class="statify" style="display: none">
-            <div class="title">滿意度調查</div>
-            <div>
-              <div class="chat-footer">
-                <div
-                  class="area-form vote"
-                  data-child="1"
-                  data-type="0"
-                  data-votesatisfiedkey="B554CCD93F7D56F9"
-                >
-                  <div class="in">
-                    <div class="hd">
-                      <div class="in">
-                        <div data-index="0">&nbsp;</div>
-                      </div>
-                    </div>
-                    <div class="ct">
-                      <div class="in">
-                        <div class="essay" data-step="1" style="">
-                          <div class="caption">&nbsp;</div>
-                        </div>
-
-                        <div class="area-form vote" data-step="1" style="">
-                          <span
-                            >請問您對於智能客服「E-GOV小幫手」這次提供的服務整體滿意度為何?（五顆星＝非常滿意）
-                          </span>
-                          <div class="fieldset">
-                            <input
-                              data-satisfiedvalue="1"
-                              id="Satisfied_0"
-                              name="Satisfied"
-                              title="1顆星"
-                              type="radio"
-                            />
-                            <label for="Satisfied_0">1顆星</label>
-                            <input
-                              data-satisfiedvalue="2"
-                              id="Satisfied_1"
-                              name="Satisfied"
-                              title="2顆星"
-                              type="radio"
-                            />
-                            <label for="Satisfied_1">2顆星</label>
-                            <input
-                              data-satisfiedvalue="3"
-                              id="Satisfied_2"
-                              name="Satisfied"
-                              title="3顆星"
-                              type="radio"
-                            />
-                            <label for="Satisfied_2">3顆星</label>
-                            <input
-                              data-satisfiedvalue="4"
-                              id="Satisfied_3"
-                              name="Satisfied"
-                              title="4顆星"
-                              type="radio"
-                            />
-                            <label for="Satisfied_3">4顆星</label>
-                            <input
-                              checked="checked"
-                              data-satisfiedvalue="5"
-                              id="Satisfied_4"
-                              name="Satisfied"
-                              title="5顆星"
-                              type="radio"
-                            />
-                            <label for="Satisfied_4">5顆星</label>
-                          </div>
-                        </div>
-                      </div>
+                      <!-- finish -->
                     </div>
                   </div>
                 </div>
-              </div>
-              <textarea
-                cols="50"
-                id="txt_satisfied"
-                placeholder="請您留下寶貴意見，我們將會持續努力提供更完美的服務，謝謝！（限50字，選填）"
-                rows="4"
-              ></textarea>
-            </div>
-            <div class="btn">
-              <a
-                class="talk_sub"
-                id="btn_submit"
-                title="送出"
-                @click="satisfiedSet"
-                >送出</a
-              >
-              <a
-                class="talk_sub"
-                id="btn_cancel"
-                title="取消"
-                @click="satisfiedCancel"
-                >取消</a
-              >
-            </div>
-          </div>
-          <!-- 個資目前沒用到 -->
-          <!-- <div class="privacy" style="display: none">
+                <!-- 上方按鈕開啟內容 -->
+                <div class="informationBlock">
+                  <div class="statify" style="display: none">
+                    <div class="title">滿意度調查</div>
+                    <div>
+                      <div class="chat-footer">
+                        <div
+                          class="area-form vote"
+                          data-child="1"
+                          data-type="0"
+                          data-votesatisfiedkey="B554CCD93F7D56F9"
+                        >
+                          <div class="in">
+                            <div class="hd">
+                              <div class="in">
+                                <div data-index="0">&nbsp;</div>
+                              </div>
+                            </div>
+                            <div class="ct">
+                              <div class="in">
+                                <div class="essay" data-step="1" style="">
+                                  <div class="caption">&nbsp;</div>
+                                </div>
+
+                                <div
+                                  class="area-form vote"
+                                  data-step="1"
+                                  style=""
+                                >
+                                  <span
+                                    >請問您對於智能客服「E-GOV小幫手」這次提供的服務整體滿意度為何?（五顆星＝非常滿意）
+                                  </span>
+                                  <div class="fieldset">
+                                    <input
+                                      data-satisfiedvalue="1"
+                                      id="Satisfied_0"
+                                      name="Satisfied"
+                                      title="1顆星"
+                                      type="radio"
+                                    />
+                                    <label for="Satisfied_0">1顆星</label>
+                                    <input
+                                      data-satisfiedvalue="2"
+                                      id="Satisfied_1"
+                                      name="Satisfied"
+                                      title="2顆星"
+                                      type="radio"
+                                    />
+                                    <label for="Satisfied_1">2顆星</label>
+                                    <input
+                                      data-satisfiedvalue="3"
+                                      id="Satisfied_2"
+                                      name="Satisfied"
+                                      title="3顆星"
+                                      type="radio"
+                                    />
+                                    <label for="Satisfied_2">3顆星</label>
+                                    <input
+                                      data-satisfiedvalue="4"
+                                      id="Satisfied_3"
+                                      name="Satisfied"
+                                      title="4顆星"
+                                      type="radio"
+                                    />
+                                    <label for="Satisfied_3">4顆星</label>
+                                    <input
+                                      checked="checked"
+                                      data-satisfiedvalue="5"
+                                      id="Satisfied_4"
+                                      name="Satisfied"
+                                      title="5顆星"
+                                      type="radio"
+                                    />
+                                    <label for="Satisfied_4">5顆星</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <textarea
+                        cols="50"
+                        id="txt_satisfied"
+                        placeholder="請您留下寶貴意見，我們將會持續努力提供更完美的服務，謝謝！（限50字，選填）"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                    <div class="btn">
+                      <a
+                        class="talk_sub"
+                        id="btn_submit"
+                        title="送出"
+                        @click="satisfiedSet"
+                        >送出</a
+                      >
+                      <a
+                        class="talk_sub"
+                        id="btn_cancel"
+                        title="取消"
+                        @click="satisfiedCancel"
+                        >取消</a
+                      >
+                    </div>
+                  </div>
+                  <!-- 個資目前沒用到 -->
+                  <!-- <div class="privacy" style="display: none">
             <div class="title">個資保密聲明</div>
             <div class="content">
               本網站使用前瞻技術提供更好的使用體驗，同時尊重使用者隱私，為維護您的權益，開始使用前懇請事先詳閱「
@@ -376,43 +431,43 @@
               >
             </div>
           </div> -->
-          <!-- finish -->
+                  <!-- finish -->
 
-          <div class="description" style="display: none">
-            <div class="title">服務說明</div>
-            <div class="content">
-              <div class="subtitle">智能文字交談服務時間</div>
-              <div class="text">24小時全年無休</div>
-              <div class="subtitle">服務範圍</div>
-              <div class="text">
-                E-GOV小幫手是由AI提供，因此可能會出現意外和錯誤。
-              </div>
-            </div>
-            <div class="btn">
-              <a
-                class="talk_sub"
-                id="btn_close"
-                title="我知道了"
-                @click="btn_close"
-                >我知道了</a
-              >
-            </div>
-          </div>
-        </div>
+                  <div class="description" style="display: none">
+                    <div class="title">服務說明</div>
+                    <div class="content">
+                      <div class="subtitle">智能文字交談服務時間</div>
+                      <div class="text">24小時全年無休</div>
+                      <div class="subtitle">服務範圍</div>
+                      <div class="text">
+                        E-GOV小幫手是由AI提供，因此可能會出現意外和錯誤。
+                      </div>
+                    </div>
+                    <div class="btn">
+                      <a
+                        class="talk_sub"
+                        id="btn_close"
+                        title="我知道了"
+                        @click="btn_close"
+                        >我知道了</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-        <div class="talk_show" id="words" :style="fontSizeStyle"></div>
+                <div class="talk_show" id="words" :style="fontSizeStyle"></div>
 
-        <div
-          class="talk_show"
-          id="tempwords"
-          style="top: -100px; height: 100px !important"
-          :style="fontSizeStyle"
-        >
-          &nbsp;
-        </div>
+                <div
+                  class="talk_show"
+                  id="tempwords"
+                  style="top: -100px; height: 100px !important"
+                  :style="fontSizeStyle"
+                >
+                  &nbsp;
+                </div>
 
-        <!-- 熱門不使用 -->
-          <!-- <div class="hot_list" :style="{ 'display':'block' }" v-show="isHot">
+                <!-- 熱門不使用 -->
+                <!-- <div class="hot_list" :style="{ 'display':'block' }" v-show="isHot">
             <div class="title">
               下列為其他使用者常搜尋的關鍵字
               <a
@@ -426,12 +481,12 @@
 
             <ul></ul>
           </div> -->
-        <!-- finish --> 
-        <div class="auto_complete">&nbsp;</div>
+                <!-- finish -->
+                <div class="auto_complete">&nbsp;</div>
 
-        <div class="talk_input">
-        <!-- 熱門不使用 -->
-          <!-- <a
+                <div class="talk_input">
+                  <!-- 熱門不使用 -->
+                  <!-- <a
             class="talk_sub hot"
             id="talkhot"
             title="熱門"
@@ -439,79 +494,88 @@
             :class="{ 'is-active' : isHot }"
             >熱門</a
           > -->
-        <!-- finish -->
-          <input class="talk_word" id="talkwords" type="text"  @keyup.enter="TalkSub" v-model="Q_Now">
-          <a class="talk_sub" id="talksub" title="傳送" @click="TalkSub"
-            >傳送</a
-          >
-        </div>
-      </div>
+                  <!-- finish -->
+                  <input
+                    class="talk_word"
+                    id="talkwords"
+                    type="text"
+                    @keyup.enter="TalkSub"
+                    v-model="Q_Now"
+                  />
+                  <a class="talk_sub" id="talksub" title="傳送" @click="TalkSub"
+                    >傳送</a
+                  >
+                </div>
+              </div>
 
-      <!-- 開始小幫手圖示 -->
-      <div
-        class="area-editor default e-book-icon"
-        data-addparentgroup="False"
-        data-anchor=""
-        data-bgclass="e-book-icon"
-        data-bgcolor="#0000ffff"
-        data-child="1"
-        data-groupname=""
-        data-groupsn="2274"
-        data-index="5"
-        data-isgroup="true"
-        data-margin_bottom="0"
-        data-margin_defaultsetting="false"
-        data-margin_left="0"
-        data-margin_right="0"
-        data-margin_top="0"
-        data-menuwidth=""
-        data-setlen="0"
-        data-sitesmodulesn="6"
-        data-sort="10"
-        data-tabtype="0"
-        data-type="0"
-        data-widthdesktop="0"
-        data-widthmobile="0"
-        data-widthpad="0"
-        id="Group_2274_LkeNWcGYvv"
-        v-show="isebookicon"
-      >
-        <div class="in">
-          <div class="ct">
-            <div class="in">
-              <p>
-                <a
-                  class="e-book-close"
-                  @click.prevent="isebookicon =! isebookicon"
-                  title="關閉E-GOV小幫手"
-                  >X</a
-                >
-                <a
-                  class="CustomerService"
-                  title="智能幫手"
-                  @click.prevent="istalkcon =!istalkcon;isebookicon =! isebookicon"
-                  >智能幫手</a
-                >
-              </p>
+              <!-- 開始小幫手圖示 -->
+              <div
+                class="area-editor default e-book-icon"
+                data-addparentgroup="False"
+                data-anchor=""
+                data-bgclass="e-book-icon"
+                data-bgcolor="#0000ffff"
+                data-child="1"
+                data-groupname=""
+                data-groupsn="2274"
+                data-index="5"
+                data-isgroup="true"
+                data-margin_bottom="0"
+                data-margin_defaultsetting="false"
+                data-margin_left="0"
+                data-margin_right="0"
+                data-margin_top="0"
+                data-menuwidth=""
+                data-setlen="0"
+                data-sitesmodulesn="6"
+                data-sort="10"
+                data-tabtype="0"
+                data-type="0"
+                data-widthdesktop="0"
+                data-widthmobile="0"
+                data-widthpad="0"
+                id="Group_2274_LkeNWcGYvv"
+                v-show="isebookicon"
+              >
+                <div class="in">
+                  <div class="ct">
+                    <div class="in">
+                      <p>
+                        <a
+                          class="e-book-close"
+                          @click.prevent="isebookicon =! isebookicon"
+                          title="關閉E-GOV小幫手"
+                          >X</a
+                        >
+                        <a
+                          class="CustomerService"
+                          title="智能幫手"
+                          @click.prevent="istalkcon =!istalkcon;isebookicon =! isebookicon"
+                          >智能幫手</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
 
     <script>
       // Vue 2.x
       const vm = new Vue({
         data: {
-          isebookicon: false, 
+          isebookicon: false,
           isinformation: false,
           istalkcon: false,
           isset_up: false,
           IsSatisfy: false,
           fontSize: "1rem",
-          Q_Now:'',
-          guid:'',
+          Q_Now: "",
+          guid: "",
           chatLogs: [],
           notfundcount: 0,
           lifeevent: [
@@ -580,7 +644,7 @@
           },
           btn_close: function () {
             $(".informationBlock>div").hide();
-            vm.isinformation = !vm.isinformation
+            vm.isinformation = !vm.isinformation;
           },
           btn_statify: function (e) {
             $(".information>.box").slideToggle("fast");
@@ -595,22 +659,22 @@
                 "satisfiedvalue"
               );
               $.ajax({
-                url: 'Common/ChatbotSatisfie.ashx',
-                type: 'POST',
+                url: "Common/ChatbotSatisfie.ashx",
+                type: "POST",
                 data: {
-                    s: 0,
-                    satisfie: satisfied_value,
-                    unsatisfie: $('#txt_satisfied').val()
-                }
-            });
+                  s: 0,
+                  satisfie: satisfied_value,
+                  unsatisfie: $("#txt_satisfied").val(),
+                },
+              });
               alert("感謝您寶貴的意見");
               $(".informationBlock>div").hide();
               $("#txt_satisfied").val("");
-              this.isinformation = !this.isinformation
+              this.isinformation = !this.isinformation;
             }
           },
           satisfiedCancel: function () {
-            this.isinformation = !this.isinformation
+            this.isinformation = !this.isinformation;
           },
           getCookie: function (name) {
             const value = `; ${document.cookie}`;
@@ -654,27 +718,27 @@
             }
             str =
               '<div class="btalk"><span class="dialog">' +
-                this.Q_Now +
+              this.Q_Now +
               this.getDateString() +
               "</span></div>";
             this.append(str);
 
             //var returntext;
             var searchword = this.Q_Now;
-            if(this.guid == this.guid){
-              this.chatLogs.push(searchword)
+            if (this.guid == this.guid) {
+              this.chatLogs.push(searchword);
             }
             this.Q_Now = "";
             //var temp = "";
             var apiobj;
             var servivecobj;
             var datas = {
-              "id": this.guid,
-              "chatLogs": this.chatLogs,
-              "Q_Now": searchword,
-              "prompt": "",
-              "similar_k": 3,
-            }
+              id: this.guid,
+              chatLogs: this.chatLogs,
+              Q_Now: searchword,
+              prompt: "",
+              similar_k: 3,
+            };
             //查詢
             $.ajax({
               type: "get",
@@ -684,37 +748,51 @@
               //url: 'https://www.gov.tw/chatbotapi.aspx?type=check&s=' + searchword,
               cache: true,
               success: function (obj) {
-              //  console.log(datas)
+                //  console.log(datas)
                 apiobj = obj;
-                servivecobj = obj.Source
-                var str = '<div class="atalk"><span class="dialog">' + vm.newline(apiobj.R)  +'<a class="talk_sub source" style="width:95%;margin:5px" onclick="vm.toggle(event)">資料來源</a><div style="display:none">'
-                servivecobj.forEach(function(element,index){
-                    str += '<p style="margin:5px 0"><a class="lifeevent" style="color:#333 !important" href="' +
-                      element.Link +
-                      '" target="_blank" data-SN="' +
-                      element.SN_Sub +
-                      '" data-Name="' +
-                      element.Title +
-                      '">' + (index+1) + '.' + 
-                      element.Department + ':' + 
-                      element.Title +
-                      "</a></p>";
-                })
-                str += "</div><ul class='assess'><li><a onclick=\"vm.satisfylog($(this),'','','','1','"+searchword+"')\">滿意</a></li><li><a onclick=\"vm.satisfylog($(this),'','','','0','"+searchword+"')\">不滿意</a></li></ul><span style='position: absolute;font-size: 0.8rem;bottom: -20px;'>以上資訊由AI生成</span>" +  vm.getDateString() + "</span></div>";
+                servivecobj = obj.Source;
+                var str =
+                  '<div class="atalk"><span class="dialog">' +
+                  vm.newline(apiobj.R) +
+                  '<a class="talk_sub source" style="width:95%;margin:5px" onclick="vm.toggle(event)">資料來源</a><div style="display:none">';
+                servivecobj.forEach(function (element, index) {
+                  str +=
+                    '<p style="margin:5px 0"><a class="lifeevent" style="color:#333 !important" href="' +
+                    element.Link +
+                    '" target="_blank" data-SN="' +
+                    element.SN_Sub +
+                    '" data-Name="' +
+                    element.Title +
+                    '">' +
+                    (index + 1) +
+                    "." +
+                    element.Department +
+                    ":" +
+                    element.Title +
+                    "</a></p>";
+                });
+                str +=
+                  "</div><ul class='assess'><li><a onclick=\"vm.satisfylog($(this),'','','','1','" +
+                  searchword +
+                  "')\">滿意</a></li><li><a onclick=\"vm.satisfylog($(this),'','','','0','" +
+                  searchword +
+                  "')\">不滿意</a></li></ul><span style='position: absolute;font-size: 0.8rem;bottom: -20px;'>以上資訊由AI生成</span>" +
+                  vm.getDateString() +
+                  "</span></div>";
                 vm.append(str);
               },
             });
           },
           //開啟/關閉資料來源
           toggle: function (event) {
-            var target = event.currentTarget
+            var target = event.currentTarget;
             //console.log(target.nextSibling)
-            if(target.textContent  == "資料來源"){
+            if (target.textContent == "資料來源") {
               target.textContent = "隱藏資料來源";
-              target.nextSibling.setAttribute('style','display:block');
-            }else{
+              target.nextSibling.setAttribute("style", "display:block");
+            } else {
               target.textContent = "資料來源";
-              target.nextSibling.setAttribute('style','display:none');
+              target.nextSibling.setAttribute("style", "display:none");
             }
           },
           getDateString: function () {
@@ -744,21 +822,21 @@
           //人生大事模板
           liftevent: function () {
             var objcomoponent = Vue.extend({
-              created:function(){
-                var that = this
+              created: function () {
+                var that = this;
                 $.ajax({
                   type: "get",
                   //url: 'https://www.gov.tw/chatbotapi.aspx?type=lifeeventlevel',
-                  url: './lifeeventlevel.json',
+                  url: "./lifeeventlevel.json",
                   cache: true,
                   success: function (obj) {
-                    that.lifeevent = obj
-                  }
-                })
+                    that.lifeevent = obj;
+                  },
+                });
               },
               data() {
                 return {
-                  lifeevent:null,
+                  lifeevent: null,
                 };
               },
               template: `<div  data-index="1" data-sitesmodulesn="1" data-margin_right="0" data-sort="2" data-bgcolor="#0000ffff" data-addparentgroup="False" data-groupsn="10478" data-widthdesktop="0" data-anchor="" data-tabtype="0" class="group-list marquee chat-marquee" data-margin_defaultsetting="false" data-type="4" data-bgclass="" data-widthmobile="0" data-groupname="" data-widthpad="0" data-margin_left="0" data-menuwidth="" data-isgroup="true" data-setlen="2" data-margin_bottom="0" data-child="8" data-margin_top="0" data-func="{\'marqueeHorizontal\':{\'auto\':false,\'delay\':5000,\'speed\':500}}"><div class="in"><div class="ct"><div class="in swiper">
@@ -899,20 +977,19 @@
             var obj = new objcomoponent().$mount();
             this.append(obj.$el);
           },
-          newGuid :function(){
-            var  guid  =   "" ;
-            for  ( var  i  =   1 ; i  <=   32 ; i ++ ){
-              var  n  =  Math.floor(Math.random() * 16.0 ).toString( 16 );
-             guid  +=    n;
-              if ((i == 8 ) || (i == 12 ) || (i == 16 ) || (i == 20 ))
-               guid  +=   " - " ;
-           }
-            return  guid;    
+          newGuid: function () {
+            var guid = "";
+            for (var i = 1; i <= 32; i++) {
+              var n = Math.floor(Math.random() * 16.0).toString(16);
+              guid += n;
+              if (i == 8 || i == 12 || i == 16 || i == 20) guid += " - ";
+            }
+            return guid;
           },
           //判斷換行
-          newline:function(text){
-            var re =/(\d+.)/g;
-            return text.replace(re, '<br>$1')
+          newline: function (text) {
+            var re = /(\d+.)/g;
+            return text.replace(re, "<br>$1");
           },
           //未處理
           satisfylog: function (a, s, lep, l, type, text) {
@@ -945,67 +1022,76 @@
           },
           AutoComplete: function (inp, arr) {
             inp.addEventListener("input", function (e) {
-              var a, b, i, val = this.value;
+              var a,
+                b,
+                i,
+                val = this.value;
               closeAllLists();
-              if (!val) { return false; }
+              if (!val) {
+                return false;
+              }
               currentFocus = -1;
               a = document.createElement("DIV");
               a.setAttribute("id", this.id + "autocomplete-list");
               a.setAttribute("class", "autocomplete-items");
               this.parentNode.insertBefore(a, this.parentNode.firstChild);
               for (i = 0; i < arr.length; i++) {
-                  if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                      b = document.createElement("DIV");
-                      b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                      b.innerHTML += arr[i].substr(val.length);
-                      b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                      b.addEventListener("click", function (e) {
-                          inp.value = this.getElementsByTagName("input")[0].value;
-                          closeAllLists();
-                      });
-                      a.appendChild(b);
-                  }
+                if (
+                  arr[i].substr(0, val.length).toUpperCase() ==
+                  val.toUpperCase()
+                ) {
+                  b = document.createElement("DIV");
+                  b.innerHTML =
+                    "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                  b.innerHTML += arr[i].substr(val.length);
+                  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                  b.addEventListener("click", function (e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    closeAllLists();
+                  });
+                  a.appendChild(b);
+                }
               }
-          });
-          inp.addEventListener("keydown", function (e) {
+            });
+            inp.addEventListener("keydown", function (e) {
               var x = document.getElementById(this.id + "autocomplete-list");
               if (x) x = x.getElementsByTagName("div");
               if (e.keyCode == 40) {
-                  currentFocus++;
-                  addActive(x);
+                currentFocus++;
+                addActive(x);
               } else if (e.keyCode == 38) {
-                  currentFocus--;
-                  addActive(x);
+                currentFocus--;
+                addActive(x);
               } else if (e.keyCode == 13) {
-                  e.preventDefault();
-                  if (currentFocus > -1) {
-                      if (x) x[currentFocus].click();
-                  }
+                e.preventDefault();
+                if (currentFocus > -1) {
+                  if (x) x[currentFocus].click();
+                }
               }
-          });
-          function addActive(x) {
+            });
+            function addActive(x) {
               if (!x) return false;
               removeActive(x);
               if (currentFocus >= x.length) currentFocus = 0;
-              if (currentFocus < 0) currentFocus = (x.length - 1);
+              if (currentFocus < 0) currentFocus = x.length - 1;
               x[currentFocus].classList.add("autocomplete-active");
-          }
-          function removeActive(x) {
+            }
+            function removeActive(x) {
               for (var i = 0; i < x.length; i++) {
-                  x[i].classList.remove("autocomplete-active");
+                x[i].classList.remove("autocomplete-active");
               }
-          }
-          function closeAllLists(elmnt) {
+            }
+            function closeAllLists(elmnt) {
               var x = document.getElementsByClassName("autocomplete-items");
               for (var i = 0; i < x.length; i++) {
-                  if (elmnt != x[i] && elmnt != inp) {
-                      x[i].parentNode.removeChild(x[i]);
-                  }
+                if (elmnt != x[i] && elmnt != inp) {
+                  x[i].parentNode.removeChild(x[i]);
+                }
               }
-          }
-          document.addEventListener("click", function (e) {
+            }
+            document.addEventListener("click", function (e) {
               closeAllLists(e.target);
-          });
+            });
           },
           inactivityTime: function () {
             var t;
@@ -1062,31 +1148,33 @@
         },
         mounted: function () {
           this.render();
-          this.guid = this.newGuid()
+          this.guid = this.newGuid();
           $("#tempwords").hide();
-          
+
           //頁面載入等待
-          $(window).ajaxStart(function(){
-            $('#tempwords').show();
-            $('#tempwords').append('<div class="atalk"><span class="dialog temploading" style="height: 25px;width: 105px;"><div>AI生成中</div><div class="typing-loader"></div></span></div>');
+          $(window).ajaxStart(function () {
+            $("#tempwords").show();
+            $("#tempwords").append(
+              '<div class="atalk"><span class="dialog temploading" style="height: 25px;width: 105px;"><div>AI生成中</div><div class="typing-loader"></div></span></div>'
+            );
             var objDiv = document.getElementById("words");
             objDiv.scrollTop = objDiv.scrollHeight;
-          })
-          $(window).ajaxStop(function(){
-            $('.temploading').parent().remove();
-            $('#tempwords').hide();
-          })
+          });
+          $(window).ajaxStop(function () {
+            $(".temploading").parent().remove();
+            $("#tempwords").hide();
+          });
 
           //文字建議帶入
           //var autocompleteurl = "https://www.gov.tw/chatbotapi.aspx?type=autocomplete";
           $.ajax({
-              type: "get",
-              //url: autocompleteurl,
-              url: './autocomplete.json',
-              cache: true,
-              success: function (obj) {
-                vm.AutoComplete(document.getElementById("talkwords"), obj);
-              }
+            type: "get",
+            //url: autocompleteurl,
+            url: "./autocomplete.json",
+            cache: true,
+            success: function (obj) {
+              vm.AutoComplete(document.getElementById("talkwords"), obj);
+            },
           });
         },
         watch: {
@@ -1097,14 +1185,14 @@
           },
           isebookicon: function () {
             if (this.isebookicon == false) {
-              this.istalkcon == false
+              this.istalkcon == false;
             }
           },
           deep: true,
         },
       });
 
-      vm.$mount("#app");
+      vm.$mount(".sys-root");
     </script>
 
     <!-- Initialize Swiper -->
@@ -1131,14 +1219,15 @@
     </script>
 
     <style>
-        /*swiper 客製樣式*/
-        .swiper-button-prev{
+      /*swiper 客製樣式*/
+      .swiper-button-prev {
         background-image: url(https://www.gov.tw/Images/icon-pic/away-b-left.png?1595239851);
       }
-      .swiper-button-next{
+      .swiper-button-next {
         background-image: url(https://www.gov.tw/Images/icon-pic/away-b-right.png?1595239824);
       }
-      .swiper-button-next,.swiper-button-prev {
+      .swiper-button-next,
+      .swiper-button-prev {
         background-repeat: no-repeat;
         background-position: center;
         opacity: 0.7;
@@ -1151,8 +1240,9 @@
         border: none !important;
         top: 37%;
       }
-      .swiper-button-next:after,.swiper-button-prev:after {
-        content: '';
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        content: "";
       }
       .swiper-button-hide {
         display: none;
@@ -1162,7 +1252,7 @@
       .area-editor .ct img {
         max-width: 100% !important;
       }
-      .chat-marquee .ct li .life-block img{
+      .chat-marquee .ct li .life-block img {
         max-width: 100% !important;
       }
       .group-list.marquee > .in > .ct > .in {
@@ -1172,7 +1262,7 @@
         margin-top: 0px !important;
         margin-bottom: 0px !important;
       }
-      .information .box ul li a{
+      .information .box ul li a {
         cursor: pointer;
       }
       /*資料來源按鈕樣式*/
@@ -1197,45 +1287,49 @@
         cursor: pointer;
         border: none !important;
         background-size: 30% !important;
-    }
-    .evaluate li:nth-child(1) a {
-      background: url(https://www.gov.tw/Images/like.png) no-repeat center #98e0b2;
-    }
-    .evaluate li:nth-child(2) a {
-      background: url(https://www.gov.tw/Images/unlike.png) no-repeat center #ffbfb4;
-     } 
-    
-     /*時間-滿意度樣式*/
-     .assess{
-      position: absolute;
-      bottom: -33px;
-      right: 35px;
-      display: flex;
-     }
-     .assess li{
-      padding: 2px !important;
-     }
-     .assess li a{
-      font-size: 0;
-      height: 25px;
-      width: 25px;
-      box-sizing: border-box;
-      padding: 0 !important;
-      border-radius: 50% !important;
-      cursor: pointer;
-      border: none !important;
-      background-size: 50% !important;
-     }
-     .assess li:nth-child(1) a {
-      background: url(https://www.gov.tw/Images/like.png) no-repeat center #98e0b2;
-    }
-    .assess li:nth-child(2) a {
-      background: url(https://www.gov.tw/Images/unlike.png) no-repeat center #ffbfb4;
-    }
+      }
+      .evaluate li:nth-child(1) a {
+        background: url(https://www.gov.tw/Images/like.png) no-repeat center
+          #98e0b2;
+      }
+      .evaluate li:nth-child(2) a {
+        background: url(https://www.gov.tw/Images/unlike.png) no-repeat center
+          #ffbfb4;
+      }
 
-     .talk_word{
-      width: calc(100% - 82px);
-     }
+      /*時間-滿意度樣式*/
+      .assess {
+        position: absolute;
+        bottom: -33px;
+        right: 35px;
+        display: flex;
+      }
+      .assess li {
+        padding: 2px !important;
+      }
+      .assess li a {
+        font-size: 0;
+        height: 25px;
+        width: 25px;
+        box-sizing: border-box;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        cursor: pointer;
+        border: none !important;
+        background-size: 50% !important;
+      }
+      .assess li:nth-child(1) a {
+        background: url(https://www.gov.tw/Images/like.png) no-repeat center
+          #98e0b2;
+      }
+      .assess li:nth-child(2) a {
+        background: url(https://www.gov.tw/Images/unlike.png) no-repeat center
+          #ffbfb4;
+      }
+
+      .talk_word {
+        width: calc(100% - 82px);
+      }
     </style>
   </body>
 </html>
